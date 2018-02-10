@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <header>
     <h1>{{ msg }}</h1>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -16,6 +16,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+header {
+  height: 200px;
+  margin-top: -24px;
+  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
 h1, h2 {
   font-weight: normal;
 }
