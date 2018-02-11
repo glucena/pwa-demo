@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ msg }}</h1>
+    <h1>{{ qrId }}</h1>
   </header>
 </template>
 
@@ -8,8 +8,12 @@
 export default {
   data () {
     return {
-      msg: 'Sample PWA made with Vue.js'
+      qrId: null
     }
+  },
+  created: function () {
+    debugger
+    this.qrId = this.$route.params.qrId
   }
 }
 </script>

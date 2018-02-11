@@ -14,6 +14,11 @@ export default new Router({
       component: Welcome
     },
     {
+      path: '/home/:qrId',
+      name: 'Home',
+      component: Home
+    },
+    {
       path: '/home',
       name: 'Home',
       component: Home
