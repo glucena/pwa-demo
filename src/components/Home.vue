@@ -21,7 +21,7 @@
         <md-card>
           <md-card-media-cover md-solid>
             <md-card-media md-ratio="16:9">
-              <img src="../assets/card-sky.jpg" alt="Skyscraper">
+              <img src="../assets/countryside.jpg" alt="Skyscraper">
             </md-card-media>
             <md-card-area>
               <md-card-header>
@@ -34,7 +34,7 @@
         <md-card>
           <md-card-media-cover md-solid>
             <md-card-media md-ratio="16:9">
-              <img src="../assets/card-sky.jpg" alt="Skyscraper">
+              <img src="../assets/montains.jpg" alt="Skyscraper">
             </md-card-media>
             <md-card-area>
               <md-card-header>
