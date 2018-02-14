@@ -4,61 +4,59 @@
       <h1>Hello {{ qrId }}!</h1>
     </header>
     <div class="content">
-      <md-card>
-        <md-card-media-cover md-solid>
-          <md-card-media md-ratio="16:9">
-            <img src="../assets/card-sky.jpg" alt="Skyscraper">
-          </md-card-media>
-          <md-card-area>
-            <md-card-header>
-              <span class="md-title">Solid background</span>
-              <span class="md-subhead">16/9 image</span>
-            </md-card-header>
-          </md-card-area>
-        </md-card-media-cover>
-      </md-card>
-      
-      <md-card>
-        <md-card-media-cover md-solid>
-          <md-card-media md-ratio="16:9">
-            <img src="../assets/card-sky.jpg" alt="Skyscraper">
-          </md-card-media>
-          <md-card-area>
-            <md-card-header>
-              <span class="md-title">Solid background</span>
-              <span class="md-subhead">16/9 image</span>
-            </md-card-header>
-          </md-card-area>
-        </md-card-media-cover>
-      </md-card>
 
-      <md-card>
-        <md-card-media-cover md-solid>
-          <md-card-media md-ratio="16:9">
-            <img src="../assets/card-sky.jpg" alt="Skyscraper">
-          </md-card-media>
-          <md-card-area>
-            <md-card-header>
-              <span class="md-title">Solid background</span>
-              <span class="md-subhead">16/9 image</span>
-            </md-card-header>
-          </md-card-area>
-        </md-card-media-cover>
-      </md-card>
+        <md-card>
+          <md-card-media-cover md-solid>
+            <md-card-media md-ratio="16:9">
+              <img src="../assets/card-sky.jpg" alt="Skyscraper">
+            </md-card-media>
+            <md-card-area>
+              <md-card-header>
+                <span class="md-title">Profile</span>
+              </md-card-header>
+            </md-card-area>
+          </md-card-media-cover>
+        </md-card>
+        
+        <md-card>
+          <md-card-media-cover md-solid>
+            <md-card-media md-ratio="16:9">
+              <img src="../assets/card-sky.jpg" alt="Skyscraper">
+            </md-card-media>
+            <md-card-area>
+              <md-card-header>
+                <span class="md-title">Web</span>
+              </md-card-header>
+            </md-card-area>
+          </md-card-media-cover>
+        </md-card>
+
+        <md-card>
+          <md-card-media-cover md-solid>
+            <md-card-media md-ratio="16:9">
+              <img src="../assets/card-sky.jpg" alt="Skyscraper">
+            </md-card-media>
+            <md-card-area>
+              <md-card-header>
+                <span class="md-title">Map</span>
+              </md-card-header>
+            </md-card-area>
+          </md-card-media-cover>
+        </md-card>
+        
+        <md-card>
+          <md-card-media-cover md-solid>
+            <md-card-media md-ratio="16:9">
+              <img src="../assets/card-sky.jpg" alt="Skyscraper">
+            </md-card-media>
+            <md-card-area>
+              <md-card-header>
+                <span class="md-title">Settings</span>
+              </md-card-header>
+            </md-card-area>
+          </md-card-media-cover>
+        </md-card>
       
-      <md-card>
-        <md-card-media-cover md-solid>
-          <md-card-media md-ratio="16:9">
-            <img src="../assets/card-sky.jpg" alt="Skyscraper">
-          </md-card-media>
-          <md-card-area>
-            <md-card-header>
-              <span class="md-title">Solid background</span>
-              <span class="md-subhead">16/9 image</span>
-            </md-card-header>
-          </md-card-area>
-        </md-card-media-cover>
-      </md-card>
     </div>
   </div>
 </template>
@@ -79,15 +77,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 header {
-  height: 200px;
+  height: 60px;
   margin-top: -24px;
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: linear-gradient(90deg, #1bd662 0%, #1fab9a 51%, #2583c9 75%);
 }
 h1 {
+  color: white;
   font-size: 4vh;
+  font-weight: bold;
+  line-height: 60px;
 }
 
-h1,
 h2 {
   font-weight: normal;
 }
@@ -104,5 +104,16 @@ li {
 
 a {
   color: #35495e;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.md-card {
+  flex: 1;
+}
+.md-card .md-title {
+  font-size: 16px;
 }
 </style>
