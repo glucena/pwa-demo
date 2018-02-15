@@ -6,13 +6,13 @@
     <div class="content">
 
         <md-card>
-          <md-card-media-cover md-solid>
+          <md-card-media-cover md-solid >
             <md-card-media md-ratio="16:9">
               <img src="../assets/card-sky.jpg" alt="Skyscraper">
             </md-card-media>
             <md-card-area>
               <md-card-header>
-                <span class="md-title">Profile</span>
+                <span class="md-title" v-on:click="goToMap()">Profile</span>
               </md-card-header>
             </md-card-area>
           </md-card-media-cover>
@@ -70,6 +70,11 @@ export default {
   },
   created: function () {
     this.qrId = this.$route.params.qrId
+  },
+  methods: {
+    goToMap: function () {
+      this.$router.push({ name: 'Map' })
+    }
   }
 }
 </script>
