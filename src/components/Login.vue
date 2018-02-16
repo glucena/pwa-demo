@@ -17,8 +17,6 @@ export default {
     scans: []
   },
   mounted: function () {
-    debugger
-    console.log('YAI', this.$refs)
     this.initializeScanner()
   },
   methods: {

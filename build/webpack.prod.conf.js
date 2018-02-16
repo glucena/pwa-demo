@@ -110,7 +110,10 @@ const webpackConfig = merge(baseWebpackConfig, {
       minify: true,
       stripPrefix: 'dist/'
     })
-  ]
+  ],
+  node: {
+    fs: "empty"
+  }
 })
 
 if (config.build.productionGzip) {
