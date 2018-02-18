@@ -10,9 +10,14 @@ import router from './router'
 import { MdCard } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 
+import 'vue-qrcode-reader/dist/vue-qrcode-reader.css'
+import VueQrcodeReader from 'vue-qrcode-reader/dist/vue-qrcode-reader.common'
+
 Vue.config.productionTip = false
 
 Vue.use(MdCard)
+
+Vue.use(VueQrcodeReader)
 
 /* eslint-disable no-new */
 new Vue({
