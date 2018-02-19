@@ -111,14 +111,32 @@ a {
   color: #35495e;
 }
 
+.content {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .flex-row {
   display: flex;
 }
 
 .md-card {
-  flex: 1;
+  display: flex; 
+  flex-basis: calc(48%);  
+  justify-content: center;
+  flex-direction: column;
+  margin: 1%;
 }
+
+.md-card .md-card-area {
+  height: 40%;
+}
+
 .md-card .md-title {
-  font-size: 16px;
+  margin-top: 0px !important;
+  font-size: 1.5rem;
 }
+
 </style>
