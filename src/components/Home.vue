@@ -1,7 +1,8 @@
 <template>
   <div>
     <header>
-      <h1>Hello {{ qrId }}!</h1>
+      <h1>Home</h1>
+      <div id="welcome">Hello {{ qrId }}!</div>
     </header>
     <div class="content">
 
@@ -82,9 +83,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 header {
-  height: 60px;
+  color: white;
+  height: 200px;
   margin-top: -24px;
   background: linear-gradient(90deg, #1bd662 0%, #1fab9a 51%, #2583c9 75%);
+}
+header > #welcome {
+  font-size: 3vh;
 }
 h1 {
   color: white;
