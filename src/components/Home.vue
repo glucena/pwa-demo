@@ -86,7 +86,10 @@ header {
   color: white;
   height: 200px;
   margin-top: -24px;
-  background: linear-gradient(90deg, #1bd662 0%, #1fab9a 51%, #2583c9 75%);
+  background: linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+              linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+              linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+              linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
 }
 header > #welcome {
   font-size: 3vh;
@@ -133,6 +136,10 @@ a {
   justify-content: center;
   flex-direction: column;
   margin: 1%;
+}
+
+.md-card .md-card-header {
+  padding: 8px;
 }
 
 .md-card .md-card-area {
