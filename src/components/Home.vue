@@ -2,7 +2,11 @@
   <div>
     <header>
       <h1>Home</h1>
-      <div id="welcome">Hello {{ qrId }}!</div>
+      <div id="welcome">
+        <md-avatar class="md-avatar-icon md-large md-primary">
+          {{ (qrId || "A").slice(0,1) }}
+        </md-avatar>
+        Hello {{ qrId }}!</div>
     </header>
     <div class="content">
 

@@ -1,9 +1,12 @@
 <template>
-  <header>
-    <h1>Login</h1>
-
-    <qrcode-reader @decode="onDecode" :paused="paused"></qrcode-reader>
-  </header>
+  <div>
+    <header>
+      <h1>Login</h1>
+    </header>
+    <div class="content">
+      <qrcode-reader @decode="onDecode" :paused="paused"></qrcode-reader>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -24,7 +27,8 @@ export default {
 </script>
 
 <style>
-#preview {
-    border: 1px solid #666666;
+.content {
+  display: flex;
+  justify-content: center;
 }
 </style>
