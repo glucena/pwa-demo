@@ -12,7 +12,8 @@ export default new Router({
     {
       path: '/',
       name: 'Welcome',
-      component: Welcome
+      component: Welcome,
+      meta: { bodyClass: 'welcome' }
     },
     {
       path: '/home/:qrId',

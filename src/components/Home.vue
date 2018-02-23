@@ -4,7 +4,7 @@
       <h1>Home</h1>
       <div id="welcome">
         <md-avatar class="md-avatar-icon md-large md-primary">
-          {{ (qrId || "A").slice(0,1) }}
+          <md-ripple>{{ (qrId || "A").slice(0,1) }}</md-ripple>
         </md-avatar>
         Hello {{ qrId }}!</div>
     </header>
@@ -122,7 +122,9 @@ li {
 a {
   color: #35495e;
 }
-
+.md-avatar-icon.md-large.md-primary {
+  background: rgba(0,0,0,0.38);
+}
 .content {
   min-height: 100%;
   display: flex;
