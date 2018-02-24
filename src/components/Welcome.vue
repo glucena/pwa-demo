@@ -3,15 +3,20 @@
     <img src="../assets/logo.png" alt="Vue.js PWA">
     <h1>{{ msg }}</h1>
 
-    <router-link to="/login" tag="button"
-                 class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-        Get started
-    </router-link>
-
-    <router-link to="/home" tag="button"
-                 class="md-raised">
-        Register
-    </router-link>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+        <router-link to="/login" tag="button"
+                     class="mdl-button mdl-js-button mdl-button--raised">
+          Get started
+        </router-link>
+      </div>
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+        <router-link to="/home" tag="button"
+                     class="mdl-button mdl-js-button mdl-button--raised">
+          Register
+        </router-link>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -40,6 +45,11 @@ div.welcome {
     margin-top: 40px;
 }
 div.welcome > h1 {
+  color: white;
+}
+.welcome button {
+  width: 80%;
+  background: rgba(0, 0, 0, 0.38);
   color: white;
 }
 </style>
