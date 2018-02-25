@@ -7,7 +7,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import { MdCard, MdAvatar, MdRipple } from 'vue-material/dist/components'
+import { MdAvatar, MdField, MdCard, MdRipple } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 
 import 'vue-qrcode-reader/dist/vue-qrcode-reader.css'
@@ -18,6 +18,8 @@ Vue.config.productionTip = false
 
 Vue.use(MdAvatar)
 Vue.use(MdCard)
+Vue.use(MdField)
+// Vue.use(MdInput)
 Vue.use(MdRipple)
 Vue.use(VueQrcodeReader)
 Vue.use(vbclass, router)
