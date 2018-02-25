@@ -30,25 +30,27 @@
 </template>
 
 <script>
+import { validationMixin } from 'vuelidate'
 import {
   required,
   minLength
 } from 'vuelidate/lib/validators'
 export default {
+  mixins: [validationMixin],
   data () {
     return {
       paused: false,
       formEnabled: false,
       form: {
         id: null
-      },
-      validations: {
-        form: {
-          firstName: {
-            required,
-            minLength: minLength(3)
-          }
-        }
+      }
+    }
+  },
+  validations: {
+    form: {
+      id: {
+        required,
+        minLength: minLength(3)
       }
     }
   },
