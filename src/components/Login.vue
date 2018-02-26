@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="login">
     <header>
       <h1>Login</h1>
     </header>
@@ -12,6 +12,9 @@
             <span class="md-error" v-if="!$v.form.id.required">The first name is required</span>
             <span class="md-error" v-else-if="!$v.form.id.minlength">Invalid first name</span>
           </md-field>
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            Login
+          </button>
         </form>
       </div>
       <div class="mdl-grid" v-else>
@@ -41,6 +44,7 @@ export default {
     return {
       paused: false,
       formEnabled: false,
+      sending: false,
       form: {
         id: null
       }
@@ -89,7 +93,20 @@ export default {
 </script>
 
 <style>
-.content {
+#login header {
+  color: white;
+  height: 65px;
+  margin-top: -24px;
+  background: linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+              linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+              linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+              linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+}
+#login h1 {
+  font-size: 25px;
+  line-height: 65px;
+}
+#login .content {
   display: flex;
   justify-content: center;
 }

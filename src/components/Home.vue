@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="home">
     <header>
       <h1>Home</h1>
       <div id="welcome">
@@ -86,7 +86,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-header {
+#home header {
   color: white;
   height: 200px;
   margin-top: -24px;
@@ -95,48 +95,48 @@ header {
               linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
               linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
 }
-header > #welcome {
+#home header > #welcome {
   font-size: 3vh;
 }
-h1 {
+#home h1 {
   color: white;
   font-size: 4vh;
   font-weight: bold;
   line-height: 60px;
 }
 
-h2 {
+#home h2 {
   font-weight: normal;
 }
 
-ul {
+#home ul {
   list-style-type: none;
   padding: 0;
 }
 
-li {
+#home li {
   display: inline-block;
   margin: 0 10px;
 }
 
-a {
+#home a {
   color: #35495e;
 }
-.md-avatar-icon.md-large.md-primary {
+#home .md-avatar-icon.md-large.md-primary {
   background: rgba(0,0,0,0.38);
 }
-.content {
+#home .content {
   min-height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-.flex-row {
+#home .flex-row {
   display: flex;
 }
 
-.md-card {
+#home .md-card {
   display: flex; 
   flex-basis: calc(48%);  
   justify-content: center;
@@ -144,15 +144,15 @@ a {
   margin: 1%;
 }
 
-.md-card .md-card-header {
+#home .md-card .md-card-header {
   padding: 8px;
 }
 
-.md-card .md-card-area {
+#home .md-card .md-card-area {
   height: 40%;
 }
 
-.md-card .md-title {
+#home .md-card .md-title {
   margin-top: 0px !important;
   font-size: 1.5rem;
 }
