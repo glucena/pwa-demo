@@ -110,4 +110,7 @@ export default {
   display: flex;
   justify-content: center;
 }
+.md-field:after {
+  background-color: rgba(0,0,0,.42);
+}
 </style>
