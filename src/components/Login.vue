@@ -5,17 +5,23 @@
     </header>
     <div class="content">
       <div class="mdl-grid" v-if="formEnabled">
-        <form novalidate @submit.prevent="validateId">
-          <md-field :class="getValidationClass('id')">
-            <label for="id">ID</label>
-            <md-input name="id" id="id" v-model="form.id" :disabled="sending" />
-            <span class="md-error" v-if="!$v.form.id.required">The first name is required</span>
-            <span class="md-error" v-else-if="!$v.form.id.minlength">Invalid first name</span>
-          </md-field>
-          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-            Login
-          </button>
-        </form>
+        <md-empty-state
+            md-icon="devices_other"
+            md-label="Please login"
+            md-description="Enter your personal id and click to log in.">
+          <form class="mdl-cell mdl-cell--6-col" novalidate @submit.prevent="validateId">
+            <md-field :class="getValidationClass('id')">
+              <label for="id">ID</label>
+              <md-input name="id" id="id" v-model="form.id" :disabled="sending" />
+              <span class="md-error" v-if="!$v.form.id.required">The id is required</span>
+              <span class="md-error" v-else-if="!$v.form.id.minlength">Invalid id</span>
+            </md-field>
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+              Login
+            </button>
+          </form>
+        </md-empty-state>
+        
       </div>
       <div class="mdl-grid" v-else>
         <div class="mdl-cell mdl-cell--12-col">
@@ -86,6 +92,7 @@ export default {
       }
     },
     login: function () {
+      console.log('-->', this.$root.$firebaseRefs.users.where)
       this.$router.push({ name: 'Home', params: { qrId: this.form.id } })
     }
   }
@@ -112,5 +119,10 @@ export default {
 }
 .md-field:after {
   background-color: rgba(0,0,0,.42);
+}
+
+.qrcode-reader {
+  display: flex;
+  justify-content: center;
 }
 </style>
