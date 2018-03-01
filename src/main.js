@@ -34,7 +34,7 @@ Vue.use(vbclass, router)
 new Vue({
   el: '#app',
   firebase: {
-    users: database.ref('users').orderByChild('created_at')
+    users: database.ref('users')
   },
   router,
   template: '<App/>',

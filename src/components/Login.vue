@@ -75,7 +75,6 @@ export default {
       this.formEnabled = true
     },
     getValidationClass: function (fieldName) {
-      console.log(this.$v)
       const field = this.$v.form[fieldName]
 
       if (field) {
@@ -92,8 +91,10 @@ export default {
       }
     },
     login: function () {
-      console.log('-->', this.$root.$firebaseRefs.users.where)
-      this.$router.push({ name: 'Home', params: { qrId: this.form.id } })
+      let self = this
+      this.$root.$firebaseRefs.users.orderByChild('username').equalTo(this.form.id).limitToFirst(1).on('child_added', function (snapshot) {
+        self.$router.push({ name: 'Home', params: { qrId: snapshot.val().name } })
+      })
     }
   }
 }
