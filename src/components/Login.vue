@@ -66,9 +66,11 @@ export default {
   },
   methods: {
     onDecode: function (qrCode) {
-      console.log(qrCode)
+      let self = this
       this.paused = true
-      this.$router.push({ name: 'Home', params: { qrId: qrCode } })
+      this.$root.$firebaseRefs.users.orderByChild('username').equalTo(qrCode).limitToFirst(1).on('child_added', function (snapshot) {
+        self.$router.push({ name: 'Home', params: { qrId: snapshot.val().name } })
+      })
     },
     enableForm: function () {
       this.paused = true
