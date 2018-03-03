@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Login from '@/components/Login'
 import Map from '@/components/Map'
+import Register from '@/components/Register'
 import Welcome from '@/components/Welcome'
 
 Vue.use(Router)
@@ -34,6 +35,11 @@ export default new Router({
       path: '/map',
       name: 'Map',
       component: Map
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     }
   ]
 })

@@ -11,7 +11,7 @@
         </router-link>
       </div>
       <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
-        <router-link to="/home" tag="button"
+        <router-link to="/register" tag="button"
                      class="mdl-button mdl-js-button mdl-button--raised">
           Register
         </router-link>
@@ -32,8 +32,8 @@ export default {
 
 
 <style>
-img {
-  height: 5em;
+.wellcome img {
+  width: 30%;
 }
 body.welcome {
   background: linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
